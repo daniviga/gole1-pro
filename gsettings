@@ -1,0 +1,6 @@
+# User
+gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+
+# GDM
+sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
