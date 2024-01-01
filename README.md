@@ -32,8 +32,8 @@ sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.housekee
 
 ## Recommend Gnome extensions
 
-- **Enhanced OSK** by cass00 ([Github](https://github.com/cass00/enhanced-osk-gnome-ext)) [Gnome](https://extensions.gnome.org/extension/6595/enhanced-osk/)
-- **Touch X** by neuromorph ([GitHub](https://github.com/neuromorph/touchx)) [Gnome](https://extensions.gnome.org/extension/6156/touch-x/)
+- **Enhanced OSK** by cass00 ([Github](https://github.com/cass00/enhanced-osk-gnome-ext)) ([Gnome](https://extensions.gnome.org/extension/6595/enhanced-osk/))
+- **Touch X** by neuromorph ([GitHub](https://github.com/neuromorph/touchx)) ([Gnome](https://extensions.gnome.org/extension/6156/touch-x/))
 
 ## Install 'phosh' on Fedora
 
