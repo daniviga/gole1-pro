@@ -1,6 +1,6 @@
 # README
 
-## Fix the rotation sensor direction
+## Fix the rotation sensor orientation
 
 Add `/etc/udev/hwdb.d/61-sensor-local.hwdb` from this repo, then
 
