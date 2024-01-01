@@ -21,7 +21,6 @@ Place `./etc/modprobe.d/rtw88-blacklist.conf` and `./etc/modprobe.d/rtw.conf` in
 ### Local user
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 ```
 
 ### GDM user
@@ -29,6 +28,10 @@ gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffe
 sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
 ```
 
+## Enable fractional scaling in Gnome
+```bash
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+```
 
 ## Recommend Gnome extensions
 
