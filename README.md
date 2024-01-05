@@ -16,6 +16,8 @@ To make the internal speakers working, copy `./lib/firmware/hda-jack-retask.fw` 
 
 These files are generated using `hdajackretask` from `alsa-tools`.
 
+![Screenshot from 2024-01-06 00-46-00](https://github.com/daniviga/gole1-pro/assets/1818657/f03ac212-b787-40ff-80cf-aa5191e418c9)
+
 
 ## Better Wi-Fi driver
 
