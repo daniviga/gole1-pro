@@ -9,6 +9,14 @@ sudo systemd-hwdb update
 sudo udevadm trigger -v -p DEVNAME=/dev/iio:device0
 ```
 
+## Fix internal speaker sound
+
+With the default configuration no sound is emitted by the internal speakers (headphones are working just fine).
+To make the internal speakers working, copy `./lib/firmware/hda-jack-retask.fw` to `/lib/firmware/hda-jack-retask.fw`, `./etc/modprobe.d/hda-jack-retask.conf` to `/etc/modprobe.d/hda-jack-retask.conf` and reboot.
+
+These files are generated using `hdajackretask` from `alsa-tools`.
+
+
 ## Better Wi-Fi driver
 
 Use the `rtw` driver: https://github.com/lwfinger/rtw88
