@@ -18,6 +18,11 @@ These files are generated using `hdajackretask` from `alsa-tools`.
 
 ![Screenshot from 2024-01-06 00-46-00](https://github.com/daniviga/gole1-pro/assets/1818657/f03ac212-b787-40ff-80cf-aa5191e418c9)
 
+Note: when [upgrading to Fedora 40](https://discussion.fedoraproject.org/t/f40-regression-internal-audio-output-device-not-found/109495) you need to cleanup the local `wireplumber` dir: 
+
+```bash
+rm -rf ~/.local/state/wireplumber 
+```
 
 ## Better Wi-Fi driver
 
