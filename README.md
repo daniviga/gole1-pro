@@ -1,5 +1,24 @@
 # README
 
+A collection of goodies and hints to get an almost full Linux support on the GOLE1 PRO Mini Touch PC.
+
+I am currently running the following setup:
+
+```
+Operating System: Fedora Linux 40
+KDE Plasma Version: 6.1.4
+KDE Frameworks Version: 6.5.0
+Qt Version: 6.7.2
+Kernel Version: 6.10.5-200.fc40.x86_64 (64-bit)
+Graphics Platform: Wayland
+Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Memory: 7.6 GiB of RAM
+Graphics Processor: Mesa Intel® UHD Graphics 600
+```
+
+However, stuff mentioned here is applicable to any recent Linux distribution.
+
+
 ## Fix the rotation sensor orientation
 
 Add `/etc/udev/hwdb.d/61-sensor-local.hwdb` from this repo, then
