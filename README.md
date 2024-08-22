@@ -89,7 +89,7 @@ It is recommended to enable the "Touch Points" Desktop Effect under the Window M
 
 ![image](https://github.com/user-attachments/assets/b3ac088c-b7fb-4f62-b414-322b1e13e65c)
 
-You may want also to disable some other effects, like the window minimize and maximize ones to save some power.
+You may also want to disable some other effects, like the window minimize and maximize ones to save some power.
 
 
 ## Gnome
