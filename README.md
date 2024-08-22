@@ -83,8 +83,14 @@ Tested with `Google Chrome Version 127.0.6533.119 (Official Build) (64-bit)`
 ## KDE
 
 As writing (Fedora 40), KDE with Plasma 6 seems to be the best option to run a DE on the Gole 1 Mini (or in general on any touch based device), since no third-party (and not always well maintained) extensions are required.
-
 It also provides, out of the box, support for any fractional display scaling factor.
+
+It is recommended to enable the "Touch Points" Desktop Effect under the Window Management section of the KDE System Settings:
+
+![image](https://github.com/user-attachments/assets/b3ac088c-b7fb-4f62-b414-322b1e13e65c)
+
+You may want also to disable some other effects, like the window minimize and maximize ones to save some power.
+
 
 ## Gnome
 ### Disable disk space warning on /boot/efi in Gnome
