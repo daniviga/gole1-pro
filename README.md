@@ -2,6 +2,9 @@
 
 A collection of goodies and hints to get an almost full Linux support on the GOLE1 PRO Mini Touch PC.
 
+![gole1-min](https://github.com/user-attachments/assets/4efc2ae4-36f1-4ca4-8122-9398293c46f0)
+
+
 I am currently running the following setup:
 
 ```
