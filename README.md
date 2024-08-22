@@ -31,29 +31,55 @@ Use the `rtw` driver: https://github.com/lwfinger/rtw88
 Place `./etc/modprobe.d/rtw88-blacklist.conf` and `./etc/modprobe.d/rtw.conf` into `/etc/modprobe.d/`. 
 
 
-## Disable disk space warning on /boot/efi
+## Enable support of Wayland OSK in Google Chrome and Chromium
 
-### Local user
+To be able to use a Wayland based OSK (provided by either Gnome or KDE) in Google Chrome or Chromium, you have to pass the following parameters to the executable:
+
+```bash
+--ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3
+```
+
+To make the change permanent:
+
+```bash
+cp /usr/share/applications/google-chrome.desktop ~/.local/share/applications
+sed -i 's/google-chrome-stable/google-chrome-stable --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3/g' ~/.local/share/applications/google-chrome.desktop
+```
+
+Tested with `Google Chrome Version 127.0.6533.119 (Official Build) (64-bit)`
+
+## KDE
+
+As writing (Fedora 40), KDE with Plasma 6 seems to be the best option to run a DE on the Gole 1 Mini (or in general on any touch based device), since no third-party (and not always well maintained) extensions are required.
+
+It also provides, out of the box, support for any fractional display scaling factor.
+
+## Gnome
+### Disable disk space warning on /boot/efi in Gnome
+
+#### Local user
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
 ```
 
-### GDM user
+#### GDM user
 ```bash
 sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.housekeeping ignore-paths "['/boot/efi']"
 ```
 
-## Enable fractional scaling in Gnome
+### Enable fractional scaling in Gnome
 ```bash
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 ```
 
-## Recommend Gnome extensions
+### Recommend Gnome extensions
 
-- **Enhanced OSK** by cass00 ([Github](https://github.com/cass00/enhanced-osk-gnome-ext)) ([Gnome](https://extensions.gnome.org/extension/6595/enhanced-osk/))
+- **Enhanced OSK** by cass00 ([Github](https://github.com/cass00/enhanced-osk-gnome-ext)) ([Gnome](https://extensions.gnome.org/extension/6595/enhanced-osk/)). **Not compatible with Gnome 46**
+- **GJS OSK** by Vishram1123 ([Github](https://github.com/Vishram1123/gjs-osk)) ([Gnome](https://extensions.gnome.org/extension/5949/gjs-osk/))
 - **Touch X** by neuromorph ([GitHub](https://github.com/neuromorph/touchx)) ([Gnome](https://extensions.gnome.org/extension/6156/touch-x/))
 
-## Install 'phosh' on Fedora
+## Phosh
+### Install 'phosh' on Fedora
 
 ```bash
 sudo dnf install -y phosh
