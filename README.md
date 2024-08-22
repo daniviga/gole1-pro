@@ -30,6 +30,16 @@ Use the `rtw` driver: https://github.com/lwfinger/rtw88
 
 Place `./etc/modprobe.d/rtw88-blacklist.conf` and `./etc/modprobe.d/rtw.conf` into `/etc/modprobe.d/`. 
 
+An handy script to compile the module when needed is:
+
+```bash
+#!/bin/bash
+
+make clean
+make
+sudo make install
+sudo modprobe rtw_8821ce
+```
 
 ## Enable support of Wayland OSK in Google Chrome and Chromium
 
