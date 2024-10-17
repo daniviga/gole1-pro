@@ -67,6 +67,14 @@ sudo modprobe rtw_8821ce
 
 To be able to use a Wayland based OSK (provided by either Gnome or KDE) in Google Chrome or Chromium, you have to pass the following parameters to the executable:
 
+### Input version 1 (KWin)
+
+```bash
+--ozone-platform=wayland --enable-wayland-ime
+```
+
+### Input version 3 (Mutter)
+
 ```bash
 --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3
 ```
@@ -75,7 +83,7 @@ To make the change permanent:
 
 ```bash
 cp /usr/share/applications/google-chrome.desktop ~/.local/share/applications
-sed -i 's/google-chrome-stable/google-chrome-stable --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3/g' ~/.local/share/applications/google-chrome.desktop
+sed -i 's/google-chrome-stable/google-chrome-stable --ozone-platform=wayland --enable-wayland-ime/g' ~/.local/share/applications/google-chrome.desktop
 ```
 
 Tested with `Google Chrome Version 127.0.6533.119 (Official Build) (64-bit)`
