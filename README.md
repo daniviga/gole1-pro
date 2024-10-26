@@ -9,12 +9,12 @@ I am currently running the following setup:
 
 ```
 Operating System: Fedora Linux 40
-KDE Plasma Version: 6.1.4
-KDE Frameworks Version: 6.5.0
+KDE Plasma Version: 6.2.2
+KDE Frameworks Version: 6.7.0
 Qt Version: 6.7.2
-Kernel Version: 6.10.5-200.fc40.x86_64 (64-bit)
+Kernel Version: 6.11.4-201.fc40.x86_64
 Graphics Platform: Wayland
-Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
+Processor: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
 Memory: 7.6 GiB of RAM
 Graphics Processor: Mesa Intel® UHD Graphics 600
 ```
@@ -61,6 +61,16 @@ make clean
 make
 sudo make install
 sudo modprobe rtw_8821ce
+```
+
+## Improve r8169 driver realiability after hibernation
+
+The `r8169` driver is known to have issues after hibernation. To improve the reliability of the driver, reload the `r8169` module after resuming from hibernation.
+
+Place `./etc/systemd/system/r8169-hibernate.service` into `/etc/systemd/system/` and enable the service:
+
+```bash
+sudo systemctl enable r8169-hibernate.service
 ```
 
 ## Enable support of Wayland OSK in Google Chrome and Chromium

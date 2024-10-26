@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix RTL-8169 Driver on resume from hibernate
+After=hibernate.target
+
+[Service]
+Type=simple
+ExecStartPre=/sbin/modprobe -r r8169
+ExecStart=/sbin/modprobe r8169
+
+[Install]
+WantedBy=hibernate.target
