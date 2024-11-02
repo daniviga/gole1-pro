@@ -8,11 +8,11 @@ A collection of goodies and hints to get an almost full Linux support on the GOL
 I am currently running the following setup:
 
 ```
-Operating System: Fedora Linux 40
+Operating System: Fedora Linux 41
 KDE Plasma Version: 6.2.2
 KDE Frameworks Version: 6.7.0
-Qt Version: 6.7.2
-Kernel Version: 6.11.4-201.fc40.x86_64 (64-bit)
+Qt Version: 6.8.0
+Kernel Version: 6.11.5-300.fc41.x86_64 (64-bit)
 Graphics Platform: Wayland
 Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
 Memory: 7.6 GiB of RAM
