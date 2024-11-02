@@ -24,6 +24,8 @@ However, stuff mentioned here is applicable to any recent Linux distribution.
 
 ## Fix the rotation sensor orientation
 
+** This step is not needed anymore starting with Fedora 41 **
+
 Add `/etc/udev/hwdb.d/61-sensor-local.hwdb` from this repo, then
 
 ```bash
