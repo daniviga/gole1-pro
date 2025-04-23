@@ -8,15 +8,15 @@ A collection of goodies and hints to get an almost full Linux support on the GOL
 I am currently running the following setup:
 
 ```
-Operating System: Fedora Linux 41
-KDE Plasma Version: 6.2.2
-KDE Frameworks Version: 6.7.0
-Qt Version: 6.8.0
-Kernel Version: 6.11.5-300.fc41.x86_64 (64-bit)
+Operating System: Fedora Linux 42
+KDE Plasma Version: 6.3.4
+KDE Frameworks Version: 6.13.0
+Qt Version: 6.9.0
+Kernel Version: 6.14.2-300.fc42.x86_64 (64-bit)
 Graphics Platform: Wayland
 Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
 Memory: 7.6 GiB of RAM
-Graphics Processor: Mesa Intel® UHD Graphics 600
+Graphics Processor: Intel® UHD Graphics 600
 ```
 
 However, stuff mentioned here is applicable to any recent Linux distribution.
@@ -24,7 +24,8 @@ However, stuff mentioned here is applicable to any recent Linux distribution.
 
 ## Fix the rotation sensor orientation
 
-** This step is not needed anymore starting with Fedora 41 **
+> [!TIP]
+> This step is not needed anymore starting with Fedora 41
 
 Add `/etc/udev/hwdb.d/61-sensor-local.hwdb` from this repo, then
 
@@ -42,11 +43,12 @@ These files are generated using `hdajackretask` from `alsa-tools`.
 
 ![Screenshot from 2024-01-06 00-46-00](https://github.com/daniviga/gole1-pro/assets/1818657/f03ac212-b787-40ff-80cf-aa5191e418c9)
 
-Note: when [upgrading to Fedora 40](https://discussion.fedoraproject.org/t/f40-regression-internal-audio-output-device-not-found/109495) you need to cleanup the local `wireplumber` dir: 
-
-```bash
-rm -rf ~/.local/state/wireplumber 
-```
+> [!NOTE]
+> when [upgrading to Fedora 40](https://discussion.fedoraproject.org/t/f40-regression-internal-audio-output-device-not-found/109495) you need to cleanup the local `wireplumber` dir: 
+> 
+> ```bash
+> rm -rf ~/.local/state/wireplumber 
+> ```
 
 ## Better Wi-Fi driver
 
