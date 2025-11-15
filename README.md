@@ -8,14 +8,14 @@ A collection of goodies and hints to get an almost full Linux support on the GOL
 I am currently running the following setup:
 
 ```
-Operating System: Fedora Linux 42
-KDE Plasma Version: 6.3.4
-KDE Frameworks Version: 6.13.0
-Qt Version: 6.9.0
-Kernel Version: 6.14.2-300.fc42.x86_64 (64-bit)
+Operating System: Fedora Linux 43
+KDE Plasma Version: 6.5.2
+KDE Frameworks Version: 6.19.0
+Qt Version: 6.10.0
+Kernel Version: 6.17.7-300.fc43.x86_64 (64-bit)
 Graphics Platform: Wayland
 Processors: 4 × Intel® Celeron® J4125 CPU @ 2.00GHz
-Memory: 7.6 GiB of RAM
+Memory: 8 GiB of RAM (7.6 GiB usable)
 Graphics Processor: Intel® UHD Graphics 600
 ```
 
@@ -36,6 +36,9 @@ sudo udevadm trigger -v -p DEVNAME=/dev/iio:device0
 
 ## Fix internal speaker sound
 
+> [!WARNING]
+> The `snd_soc_avs` may conflict with the `snd_hda_intel` driver, so make sure to blacklist it by placing `./etc/modprobe.d/blacklist-snd-soc-avs.conf` into `/etc/modprobe.d/`.
+
 With the default configuration no sound is emitted by the internal speakers (headphones are working just fine).
 To make the internal speakers working, copy `./lib/firmware/hda-jack-retask.fw` to `/lib/firmware/hda-jack-retask.fw`, `./etc/modprobe.d/hda-jack-retask.conf` to `/etc/modprobe.d/hda-jack-retask.conf` and reboot.
 
@@ -51,6 +54,9 @@ These files are generated using `hdajackretask` from `alsa-tools`.
 > ```
 
 ## Better Wi-Fi driver
+
+> [!TIP]
+> This driver is not recommended anymore with kernel 6.15 and newer, since the in-kernel `rtw88` driver has much better support for the `RTL8821CE` device.
 
 Use the `rtw` driver: https://github.com/lwfinger/rtw88
 
@@ -104,7 +110,7 @@ Tested with `Google Chrome Version 127.0.6533.119 (Official Build) (64-bit)`
 
 ## KDE
 
-As writing (Fedora 40), KDE with Plasma 6 seems to be the best option to run a DE on the Gole 1 Mini (or in general on any touch based device), since no third-party (and not always well maintained) extensions are required.
+As writing (Fedora 43), KDE with Plasma 6 seems to be the best option to run a DE on the Gole 1 Mini (or in general on any touch based device), since no third-party (and not always well maintained) extensions are required.
 It also provides, out of the box, support for any fractional display scaling factor.
 
 It is recommended to enable the "Touch Points" Desktop Effect under the Window Management section of the KDE System Settings:
@@ -115,6 +121,10 @@ You may also want to disable some other effects, like the window minimize and ma
 
 
 ## Gnome
+
+> [!CAUTION]
+> Below section is outdated and unmaintained.
+
 ### Disable disk space warning on /boot/efi in Gnome
 
 #### Local user
